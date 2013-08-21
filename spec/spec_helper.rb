@@ -20,6 +20,9 @@ RSpec.configure do |config|
   # config.mock_with :mocha
   # config.mock_with :flexmock
   # config.mock_with :rr
+  
+  #Added this to fix 'visit' method missing - http://stackoverflow.com/questions/8862967/visit-method-not-found-in-my-rspec
+  config.include Capybara::DSL
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
